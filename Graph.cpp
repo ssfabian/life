@@ -2,25 +2,7 @@
 #include "wx/wx.h"
 #include "wx/dcclient.h"
 #include "Graph.h"
-
-
-class DrawGraph : public wxPanel
-{
-	public: 
-		DrawGraph(wxFrame* parent);
-		void paintEvent(wxPaintEvent & evt);
-		void drawGraph(wxDC& dc);
-		
-		DECLARE_EVENT_TABLE()
-};
-
-
-//class MyApp: public wxApp
-//{
-//	bool OnInit();
-//	DrawGraph *drawPane;
-//
-//};
+#include "DrawGraph.h"
 
 
 BEGIN_EVENT_TABLE(DrawGraph, wxPanel)
@@ -28,6 +10,10 @@ BEGIN_EVENT_TABLE(DrawGraph, wxPanel)
 END_EVENT_TABLE()
 
 
+
+DrawGraph::DrawGraph(wxFrame* parent) : wxPanel(parent)
+{
+}
 
 void DrawGraph::drawGraph(wxDC& dc)
 {
@@ -74,9 +60,4 @@ IMPLEMENT_APP(MyApp)
  	return true;
  
  }
-
-DrawGraph::DrawGraph(wxFrame* parent) : wxPanel(parent)
-{
-
-}
 

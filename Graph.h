@@ -6,11 +6,6 @@ class MyApp : public wxApp
  {
  public:
  	virtual bool OnInit();
-	//void drawGraph(wxDC& dc);
-
-	//void paintEvent(wxPaintEvent & evt);
-	
-	//	DECLARE_EVENT_TABLE()
 };
 
  DECLARE_APP(MyApp)
